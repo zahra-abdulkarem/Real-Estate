@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  transition: 1s;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.btn {
+  width: 12rem;
+  height: 3.4rem;
+  color: #fff;
+  background: #003cb3;
+  font-size: 1rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: 0.5s;
+  position: relative;
+  margin: 1rem;
+  padding: 0.5rem;
+}
+.btn:hover {
+  background: #2755b2;
+}
+.btn:hover span {
+  margin-left: 0.4rem;
+  width: 3.2rem;
+}
+.btn span {
+  font-size: 1.2rem;
+  width: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.title {
+  color: #000080;
+  padding: 1rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+section {
+  margin: 0;
+  padding: 3rem 1rem;
+}
+
+@media (max-width: 991px) {
+  section {
+    padding: 1.5rem 0.5rem;
+  }
+}
+@media (max-width: 700px) {
+  section {
+    padding: 1rem 0.2rem;
+  }
+  .btn {
+    width: 10rem;
+    height: 3rem;
+    font-size: 0.8rem;
+    margin: 0.7rem;
+    padding: 0.3rem;
+  }
+  .btn:hover span {
+    margin-left: 0.3rem;
+    width: 2.7rem;
+  }
+  .btn span {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 441px) {
+  .title {
+    padding: 0.7rem;
+    font-size: 1.5rem;
+  }
+  .btn {
+    width: 7.5rem;
+    height: 2.6rem;
+    font-size: 0.8rem;
+    margin: 0.8rem;
+  }
+  .btn:hover span {
+    margin-left: 0.1rem;
+    width: 2.2rem;
+  }
+  .btn span {
+    font-size: 0.7rem;
+  }
+}
+.blogs {
+  background: #ddd;
+  padding: 0.5rem;
+  transition: 1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.blogs .blog-input {
+  width: 60%;
+  height: 3rem;
+  padding: 0.5rem;
+  background: #fff;
+  border-radius: 2rem;
+  margin: 2rem 0;
+  color: #555;
+  font-size: 1.3rem;
+  border: none;
+  outline: none;
+}
+.blogs .blogs-container {
+  display: flex;
+  align-items: flex-start;
+}
+.blogs .blogs-container .blogs-nav-bar {
+  background: #eee;
+  display: flex;
+  flex-direction: column;
+  margin-right: 0.3rem;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+.blogs .blogs-container .blogs-nav-bar h1 {
+  font-size: 1.3rem;
+  color: #000080;
+  padding-bottom: 1rem;
+  border-bottom: 0.3rem solid #003cb3;
+}
+.blogs .blogs-container .blogs-nav-bar a {
+  font-size: 1rem;
+  color: #003cb3;
+  text-decoration: none;
+  margin: 1rem 0;
+}
+.blogs .blogs-container .blogs-nav-bar a:hover {
+  text-decoration: underline;
+  color: #777;
+}
+.blogs .blogs-container .all-blogs {
+  display: grid;
+  grid-template-columns: repeat(2, 49.5%);
+  gap: 0.7rem;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .blogs .all-blogs {
+    width: 99%;
+  }
+}
+@media (max-width: 751px) {
+  .blogs .blogs-container {
+    flex-wrap: wrap;
+  }
+  .blogs .blogs-container .blogs-nav-bar {
+    margin-right: 0;
+    padding: 0.4rem;
+    margin-bottom: 0.5rem;
+  }
+  .blogs .blogs-container .blogs-nav-bar h1 {
+    font-size: 1rem;
+  }
+  .blogs .blogs-container .blogs-nav-bar a {
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+  }
+  .blogs .blogs-container .all-blogs {
+    grid-template-columns: 100%;
+    gap: 0.4rem;
+  }
+  .blogs .blogs-container .all-blogs .blog-card img {
+    height: 12rem;
+  }
+}
+@media (max-width: 451px) {
+  .blogs .blogs-container {
+    flex-wrap: wrap;
+  }
+  .blogs .blogs-container .blogs-nav-bar {
+    margin-right: 0;
+    padding: 0.4rem;
+    margin-bottom: 0.5rem;
+  }
+  .blogs .blogs-container .blogs-nav-bar h1 {
+    font-size: 1rem;
+  }
+  .blogs .blogs-container .blogs-nav-bar a {
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+  }
+  .blogs .blogs-container .all-blogs {
+    grid-template-columns: 100%;
+    gap: 0.4rem;
+  }
+  .blogs .blogs-container .all-blogs .blog-card .blog-title {
+    font-size: 1.1rem;
+    margin: 0.7rem 0;
+  }
+  .blogs .blogs-container .all-blogs .blog-card img {
+    height: 10rem;
+  }
+  .blogs .blogs-container .all-blogs .blog-card p {
+    font-size: 0.8rem;
+    word-spacing: 0;
+  }
+}/*# sourceMappingURL=Blogs.css.map */

@@ -1,0 +1,69 @@
+@import '../../../../App.scss';
+.Rent{
+    background: #eee;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    .search-optione{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        .services-btn{
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #999;
+            font-size: 1.2rem;
+            padding: .5rem 1rem;
+            margin: 1.5rem .7rem;
+            border: .1rem solid #999;
+            border-radius: 5rem;
+            &:hover{
+                color: $main-color;
+                border: .1rem solid $main-color;
+            }
+        }
+    }
+    .rent-cards{
+        display: grid;
+        grid-template-columns: repeat(4, 24%);
+        gap: .5rem;
+        row-gap: 1.2rem;
+    }
+}
+
+
+
+@media (max-width: 991px){
+    .Rent{
+        .rent-cards{
+            grid-template-columns: repeat(3, 32%);
+            row-gap: 1rem;
+        }
+    }
+}
+
+@media (max-width: 771px){
+    .Rent{
+        .rent-cards{
+            grid-template-columns: repeat(2, 49%);
+            row-gap: 1rem;
+        }
+    }
+}
+
+@media (max-width: 441px){
+    .Rent{
+        .search-optione{
+            .services-btn{
+                font-size: .85rem;
+                padding: .5rem .7rem;
+                margin: .4rem 0;
+            }
+        }
+        .rent-cards{
+            grid-template-columns: 100%;
+            row-gap: .5rem;
+        }
+    }
+}

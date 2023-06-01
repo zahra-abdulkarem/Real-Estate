@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.btn {
+  width: 12rem;
+  height: 3.4rem;
+  color: #fff;
+  background: #003cb3;
+  font-size: 1rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: 0.5s;
+  position: relative;
+  margin: 1rem;
+  padding: 0.5rem;
+}
+.btn:hover {
+  background: #2755b2;
+}
+.btn:hover span {
+  margin-left: 0.4rem;
+  width: 3.2rem;
+}
+.btn span {
+  font-size: 1.2rem;
+  width: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.title {
+  color: #000080;
+  padding: 1rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+section {
+  margin: 0;
+  padding: 3rem 1rem;
+}
+
+@media (max-width: 991px) {
+  section {
+    padding: 1.5rem 0.5rem;
+  }
+}
+@media (max-width: 700px) {
+  section {
+    padding: 1rem 0.2rem;
+  }
+  .btn {
+    width: 10rem;
+    height: 3rem;
+    font-size: 0.8rem;
+    margin: 0.7rem;
+    padding: 0.3rem;
+  }
+  .btn:hover span {
+    margin-left: 0.3rem;
+    width: 2.7rem;
+  }
+  .btn span {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 441px) {
+  .title {
+    padding: 0.7rem;
+    font-size: 1.5rem;
+  }
+  .btn {
+    width: 7.5rem;
+    height: 2.6rem;
+    font-size: 0.8rem;
+    margin: 0.8rem;
+  }
+  .btn:hover span {
+    margin-left: 0.1rem;
+    width: 2.2rem;
+  }
+  .btn span {
+    font-size: 0.7rem;
+  }
+}/*# sourceMappingURL=Apartments.css.map */

@@ -1,0 +1,129 @@
+@import '../../../App.scss';
+
+
+.Apartments{
+    background: #eee;
+    .Apartments-container{
+        .input-form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            input{
+                width: 50%;
+                height: 3rem;
+                border: .1rem solid #999;
+                border-radius: 5rem;
+                outline: none;
+                color: $main-color;
+                font-size: 1.2rem;
+                padding: .5rem 1rem;
+                margin: 2rem .5rem;
+            }
+            .fa-magnifying-glass{
+                width: 3rem;
+                height: 3rem;
+                color: #fff;
+                background: $second-color;
+                font-size: 1rem;
+                border-radius: 5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                transition: 0.8s;
+                position: relative;
+                padding: .5rem;
+                cursor: pointer;
+                &:hover{
+                    width: 10rem;
+                    background: #0248d3;
+                    span{
+                        width: 5.5rem;
+                        margin-left: 1rem;
+                    }
+                }
+                span{
+                    width: 0;
+                    overflow: hidden;
+                    transition: 0.8s;
+                }
+            }
+        }
+        .button-place{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem;
+        }
+        .Apartments-cards{
+            display: grid;
+            grid-template-columns: repeat(4, 24%);
+            gap: .5rem;
+            row-gap: 1.2rem;
+        }
+    }
+}
+
+@media (max-width: 991px){
+    .Apartments{
+        .Apartments-container{
+            .input-form{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                input{
+                    width: 80%;
+                    height: 2.5rem;
+                }
+                .fa-magnifying-glass{
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+            .Apartments-cards{
+                grid-template-columns: repeat(3, 31%);
+                row-gap: 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 771px){
+    .Apartments{
+        .Apartments-container{
+            .input-form{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                input{
+                    width: 80%;
+                    height: 2.5rem;
+                }
+                .fa-magnifying-glass{
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+            .Apartments-cards{
+                grid-template-columns: repeat(2, 50%);
+                row-gap: 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 441px){
+    .Apartments{
+        .Apartments-container{
+            .input-form{
+                input{
+                    width: 80%;
+                    height: 2rem;
+                }
+            }
+            .Apartments-cards{
+                grid-template-columns: 100%;
+            }
+        }
+    }
+}

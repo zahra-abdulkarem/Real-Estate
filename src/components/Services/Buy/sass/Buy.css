@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  transition: 1s;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.btn {
+  width: 12rem;
+  height: 3.4rem;
+  color: #fff;
+  background: #003cb3;
+  font-size: 1rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: 0.5s;
+  position: relative;
+  margin: 1rem;
+  padding: 0.5rem;
+}
+.btn:hover {
+  background: #2755b2;
+}
+.btn:hover span {
+  margin-left: 0.4rem;
+  width: 3.2rem;
+}
+.btn span {
+  font-size: 1.2rem;
+  width: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.title {
+  color: #000080;
+  padding: 1rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+section {
+  margin: 0;
+  padding: 3rem 1rem;
+}
+
+@media (max-width: 991px) {
+  section {
+    padding: 1.5rem 0.5rem;
+  }
+}
+@media (max-width: 700px) {
+  section {
+    padding: 1rem 0.2rem;
+  }
+  .btn {
+    width: 10rem;
+    height: 3rem;
+    font-size: 0.8rem;
+    margin: 0.7rem;
+    padding: 0.3rem;
+  }
+  .btn:hover span {
+    margin-left: 0.3rem;
+    width: 2.7rem;
+  }
+  .btn span {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 441px) {
+  .title {
+    padding: 0.7rem;
+    font-size: 1.5rem;
+  }
+  .btn {
+    width: 7.5rem;
+    height: 2.6rem;
+    font-size: 0.8rem;
+    margin: 0.8rem;
+  }
+  .btn:hover span {
+    margin-left: 0.1rem;
+    width: 2.2rem;
+  }
+  .btn span {
+    font-size: 0.7rem;
+  }
+}
+.Buy {
+  background: #eee;
+  padding-bottom: 3rem;
+}
+.Buy .buy-container .input-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Buy .buy-container .input-form input {
+  width: 50%;
+  height: 3rem;
+  border: 0.1rem solid #999;
+  border-radius: 5rem;
+  outline: none;
+  color: #000080;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  margin: 2rem 0.5rem;
+}
+.Buy .buy-container .input-form .fa-magnifying-glass {
+  width: 3rem;
+  height: 3rem;
+  color: #fff;
+  background: #003cb3;
+  font-size: 1rem;
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: 0.8s;
+  position: relative;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.Buy .buy-container .input-form .fa-magnifying-glass:hover {
+  width: 10rem;
+  background: #0248d3;
+}
+.Buy .buy-container .input-form .fa-magnifying-glass:hover span {
+  width: 5.5rem;
+  margin-left: 1rem;
+}
+.Buy .buy-container .input-form .fa-magnifying-glass span {
+  width: 0;
+  overflow: hidden;
+  transition: 0.8s;
+}
+.Buy .buy-container .button-place {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+.Buy .buy-container .buy-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  gap: 0.5rem;
+  row-gap: 1.2rem;
+}
+
+@media (max-width: 991px) {
+  .Buy .buy-container .input-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Buy .buy-container .input-form input {
+    width: 80%;
+    height: 2.5rem;
+  }
+  .Buy .buy-container .input-form .fa-magnifying-glass {
+    width: 2rem;
+    height: 2rem;
+  }
+  .Buy .buy-container .buy-cards {
+    grid-template-columns: repeat(3, 31%);
+    row-gap: 1rem;
+  }
+}
+@media (max-width: 771px) {
+  .Buy .buy-container .input-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Buy .buy-container .input-form input {
+    width: 80%;
+    height: 2.5rem;
+  }
+  .Buy .buy-container .input-form .fa-magnifying-glass {
+    width: 2rem;
+    height: 2rem;
+  }
+  .Buy .buy-container .buy-cards {
+    grid-template-columns: repeat(2, 50%);
+    row-gap: 1rem;
+  }
+}
+@media (max-width: 441px) {
+  .Buy .buy-container .input-form input {
+    width: 80%;
+    height: 2rem;
+  }
+  .Buy .buy-container .buy-cards {
+    grid-template-columns: 100%;
+  }
+}/*# sourceMappingURL=Buy.css.map */

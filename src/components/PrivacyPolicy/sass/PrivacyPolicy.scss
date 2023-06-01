@@ -1,0 +1,47 @@
+@import '../../../App.scss';
+.PrivacyPolicy{
+    background: #fff;
+    .box{
+        padding: 2rem 5rem;
+        line-height: 2rem;
+        p{
+            font-size: 1rem;
+            color: $second-color;
+            word-spacing: .3rem;
+        }
+        h5{
+            font-size: 1.3rem;
+            color: $dark;
+            border-bottom: .35rem solid $main-color;
+            width: 7rem;
+        }
+        ul{
+            margin-top: 1rem;
+            li{
+                
+                color: $main-color;
+            }
+        }
+    }
+}
+
+
+
+@media(max-width: 691px){
+    .PrivacyPolicy{
+        .box{
+            padding: 1rem 1.5rem;
+        }
+    }
+}
+
+@media(max-width: 441px){
+    .PrivacyPolicy{
+        .box{
+            padding: 1rem;
+            p{
+                font-size: .9rem;
+            }
+        }
+    }
+}

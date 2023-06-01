@@ -1,0 +1,58 @@
+@import '../../../App.scss';
+.HomeContent{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(
+        #0000807d,
+        #003cb331
+    ), url('../../../images/home.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    color: $light-color;
+    h1{
+        color: $main-color;
+        font-size: 4rem;
+    }
+    p{
+        margin: 2rem 0;
+        font-size: 1.4rem;
+    }
+}
+.house-examples{
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    gap: .6rem;
+    background: #eee;
+}
+
+@media (max-width: 771px){
+    .HomeContent{
+        h1{
+            font-size: 2rem;
+            text-align: center;
+        }
+        p{
+            font-size: .9rem;
+            text-align: center;
+        }
+    }
+    .house-examples{
+        grid-template-columns: repeat(2, 49%);
+    }
+}
+
+@media (max-width: 441px){
+    .HomeContent{
+        height: 65vh;
+    }
+    .house-examples{
+        grid-template-columns: 100%;
+    }
+}
