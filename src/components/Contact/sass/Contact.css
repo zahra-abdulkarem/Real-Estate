@@ -5,7 +5,7 @@
   font-family: sans-serif;
   letter-spacing: 0.1rem;
   text-transform: capitalize;
-  transition: 1s;
+  transition: 0.4s;
 }
 
 body {
@@ -56,12 +56,23 @@ section {
   padding: 3rem 1rem;
 }
 
+.prudect-Cards-Container {
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  gap: 0.5rem;
+  row-gap: 1.2rem;
+}
+
 @media (max-width: 991px) {
   section {
     padding: 1.5rem 0.5rem;
   }
 }
 @media (max-width: 700px) {
+  .title {
+    padding: 1rem;
+    font-size: 2rem;
+  }
   section {
     padding: 1rem 0.2rem;
   }
@@ -78,6 +89,10 @@ section {
   }
   .btn span {
     font-size: 0.9rem;
+  }
+  .prudect-Cards-Container {
+    grid-template-columns: repeat(2, 50%);
+    row-gap: 0.7rem;
   }
 }
 @media (max-width: 441px) {
@@ -98,121 +113,124 @@ section {
   .btn span {
     font-size: 0.7rem;
   }
+  .prudect-Cards-Container {
+    grid-template-columns: 100%;
+  }
 }
-.contact {
-  background: #e6f9ff;
-}
-.contact .container {
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
-}
-.contact .container .menu-bars {
-  background: #003cb3;
-  color: #e6f9ff;
-  font-size: 1.4rem;
-  padding: 0.5rem;
-  margin: 0.5rem;
-  border-radius: 0.3rem;
-}
-.contact .container .contact-content {
+.Contact {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: #eee;
 }
-.contact .container .contact-content h4 {
-  font-size: 1rem;
-  font-weight: lighter;
-  color: #002633;
-  text-align: center;
-  margin: 1rem 0.5rem;
-  padding: 0 2rem;
+.Contact .contact-top {
+  position: absolute;
+  top: 5rem;
+  left: 1rem;
 }
-.contact .container .contact-content form {
-  width: 99%;
-  margin: 1rem 0.5rem;
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem;
-  border: 0.1rem solid #ddd;
-}
-.contact .container .contact-content form input,
-.contact .container .contact-content form textarea {
-  width: 99%;
-  max-width: 99%;
-  height: 2rem;
-  outline: none;
-  border: none;
-  background: transparent;
-  padding: 1.2rem;
-  margin: 0.7rem 0;
-  border-bottom: 0.1rem solid #ddd;
-}
-.contact .container .contact-content form textarea {
-  min-width: 99%;
-  height: 5rem;
-  max-height: 7rem;
-}
-.contact .container .info {
-  text-align: center;
+.Contact .contact-top .fa-info {
+  background: #000080;
+  padding: 0.5rem 0.8rem;
+  border-radius: 50%;
   color: #fff;
-  font-size: 1.4rem;
-  background: #003cb3;
-  padding: 2rem;
-  border-radius: 0.3rem;
-  display: none;
-}
-.contact .container .info h4 {
-  font-size: 2rem;
-  color: #000080;
-}
-.contact .container .info .info-options {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-}
-.contact .container .info .info-options i {
-  margin: 1rem 0;
   font-size: 1.2rem;
+  margin: 0.5rem;
+}
+.Contact .contact-top .fa-info:hover {
+  background: #003cb3;
+}
+.Contact .contact-top .info {
+  background: #000080;
+  padding: 1rem;
+  line-height: 3rem;
+  border-radius: 0.5rem;
+  display: none;
   cursor: pointer;
 }
-.contact .container .info .info-options i span {
-  font-weight: lighter;
-  margin-left: 1rem;
-  font-size: 1rem;
+.Contact .contact-top .info li {
+  list-style: none;
+  font-size: 0.8rem;
+  word-spacing: 0.4rem;
+  color: #fff;
 }
-.contact .container .info .info-options i:hover {
+.Contact .contact-top .info li:hover {
+  color: #003cb3;
+}
+.Contact .contact-top .info li:hover i {
+  transform: rotate(360deg);
+}
+.Contact .contact-top .info li:hover span {
+  letter-spacing: 0.2rem;
+}
+.Contact .contact-top .info li span {
+  font-weight: lighter;
+}
+.Contact .contact-top .info.show-info {
+  display: block;
+}
+.Contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+.Contact form input,
+.Contact form textarea {
+  min-width: 35rem;
+  min-height: 3rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  margin: 0.5rem 0;
+  background: #eee;
+  border: 0.1rem solid #fff;
+  border-radius: 2rem;
+  font-size: 1.1rem;
   color: #000080;
 }
-.contact .container .show-info {
-  display: block;
+.Contact form textarea {
+  max-height: 10rem;
+  max-width: 40rem;
+  height: 7rem;
 }
 
 @media (max-width: 771px) {
-  .contact .container .menu-bars {
-    position: absolute;
-    top: 5rem;
-    left: 1rem;
-  }
-  .contact .container .info {
-    font-size: 0.8rem;
+  .Contact form {
     padding: 0.5rem;
-    position: absolute;
-    top: 9rem;
-    left: 1rem;
   }
-  .contact .container .info h4 {
-    font-size: 1.3rem;
+  .Contact form input,
+  .Contact form textarea {
+    min-width: 30rem;
+    min-height: 2.4rem;
   }
-  .contact .container .info .info-options i {
-    margin: 0.6rem 0;
-    font-size: 1rem;
+  .Contact form textarea {
+    max-height: 8rem;
+    max-width: 30rem;
+    height: 5rem;
   }
-  .contact .container .info .info-options i span {
-    margin-left: 0.5rem;
+}
+@media (max-width: 499px) {
+  .Contact .contact-top {
+    left: 0.4rem;
+  }
+  .Contact .contact-top .info {
+    padding: 0.4rem;
+    line-height: 2rem;
+  }
+  .Contact .contact-top .info li {
+    word-spacing: 0.1rem;
+  }
+  .Contact form {
+    padding: 0.5rem;
+  }
+  .Contact form input,
+  .Contact form textarea {
+    min-width: 17rem;
+    min-height: 2.4rem;
+  }
+  .Contact form textarea {
+    max-height: 8rem;
+    max-width: 20rem;
+    height: 5rem;
   }
 }/*# sourceMappingURL=Contact.css.map */

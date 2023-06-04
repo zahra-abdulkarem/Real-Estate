@@ -1,6 +1,6 @@
 import React from 'react'
-import {PrudectCard} from '../../exports'
-import card from '../../../Data/buyCardData'
+import { PrudectCard} from '../../exports'
+import {buyData} from '../../../Data/prudectsData'
 import './sass/Buy.css'
 import { useState, useRef } from 'react'
 
@@ -9,6 +9,7 @@ const Buy = () => {
 
     const [searchTerm, setSearchTerm] = useState("");
     const searchInput = useRef();
+
     return (
         <React.Fragment>
             <div hrfe="/Buy" className='Buy'>
@@ -17,16 +18,12 @@ const Buy = () => {
                         <input  type='text'  id="search-filter" ref={searchInput} placeholder="search here..." onChange={(event) => {
                             setSearchTerm(event.target.value);
                         }}/>
-                        <i className="fa-solid fa-magnifying-glass"><span>search</span></i>
+                        <div className='search-btn'><i className="fa-solid fa-magnifying-glass"></i><span>search</span></div>
                     </div>
-                    <div className='button-place'>
-                        <button id="title" className='btn'>search by title <span>&#10230;</span></button>
 
-                        <button id="price" className='btn'>search by price <span>&#10230;</span></button>
-                    </div>
-                    <div className='buy-cards'>
+                    <div className='prudect-Cards-Container'>
                         {
-                            card.filter((val) => {
+                            buyData.filter((val) => {
                                 if(searchTerm === ""){
                                     return val;
                                 }else if(val.h1.toLowerCase().includes(searchTerm.toLowerCase())){

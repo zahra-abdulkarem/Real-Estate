@@ -5,7 +5,7 @@
   font-family: sans-serif;
   letter-spacing: 0.1rem;
   text-transform: capitalize;
-  transition: 1s;
+  transition: 0.4s;
 }
 
 body {
@@ -56,6 +56,13 @@ section {
   padding: 3rem 1rem;
 }
 
+.prudect-Cards-Container {
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  gap: 0.5rem;
+  row-gap: 1.2rem;
+}
+
 @media (max-width: 991px) {
   section {
     padding: 1.5rem 0.5rem;
@@ -79,6 +86,10 @@ section {
   .btn span {
     font-size: 0.9rem;
   }
+  .prudect-Cards-Container {
+    grid-template-columns: repeat(2, 50%);
+    row-gap: 1rem;
+  }
 }
 @media (max-width: 441px) {
   .title {
@@ -98,50 +109,73 @@ section {
   .btn span {
     font-size: 0.7rem;
   }
+  .prudect-Cards-Container {
+    grid-template-columns: 100%;
+  }
 }
-.PrudectCard {
+a {
+  text-decoration: none;
+}
+a .PrudectCard {
   width: 100%;
   margin: 0.7rem;
   padding: 0.5rem;
   background: transparent;
   text-align: start;
   overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
 }
-.PrudectCard:hover {
+a .PrudectCard:hover {
   transition: 0.5s;
 }
-.PrudectCard:hover img {
+a .PrudectCard:hover .go-to-more-details {
   opacity: 1;
+  width: 96%;
 }
-.PrudectCard:hover .go-to-more-details {
-  display: block;
+a .PrudectCard:focus {
+  transition: 0.5s;
 }
-.PrudectCard img {
+a .PrudectCard:focus .go-to-more-details {
+  opacity: 1;
+  width: 96%;
+}
+a .PrudectCard img {
   width: 100%;
   height: 15rem;
-  opacity: 0.7;
 }
-.PrudectCard .go-to-more-details {
-  display: none;
-  font-size: 0.7rem;
-  color: #003cb3;
+a .PrudectCard .go-to-more-details {
+  top: 0.5rem;
+  opacity: 0;
+  width: 0;
+  height: 15rem;
+  display: flex;
+  color: #e6f9ff;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  position: absolute;
+  background: rgba(51, 45, 147, 0.409);
+  z-index: 20;
+  transition: 0.7s;
 }
-.PrudectCard h1 {
+a .PrudectCard h1 {
   color: #000080;
   font-size: 1.2rem;
   margin: 0.5rem 0;
 }
-.PrudectCard p {
+a .PrudectCard p {
   font-size: 0.9rem;
   word-spacing: 0.2rem;
   color: #777;
   line-height: 1.6rem;
 }
-.PrudectCard h3 {
+a .PrudectCard h3 {
   color: #666;
   font-size: 1rem;
 }
-.PrudectCard .more-info {
+a .PrudectCard .more-info {
   word-spacing: 0.4rem;
   font-size: 1rem;
   color: #003cb3;
@@ -149,23 +183,32 @@ section {
 }
 
 @media (max-width: 751px) {
-  .PrudectCard {
-    width: 97%;
+  a .PrudectCard {
+    width: 95%;
     margin: 1rem 0;
     padding: 0.3rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid #cfcece;
   }
-  .PrudectCard img {
+  a .PrudectCard img {
     height: 12rem;
   }
-  .PrudectCard h1 {
+  a .PrudectCard .go-to-more-details {
+    top: 0.3rem;
+    width: 96.3%;
+    height: 12rem;
+    font-size: 1rem;
+  }
+  a .PrudectCard h1 {
     font-size: 1.1rem;
     margin: 0.6rem 0;
   }
 }
 @media (max-width: 441px) {
-  .PrudectCard {
+  a .PrudectCard {
     width: 100%;
+  }
+  a .PrudectCard .go-to-more-details {
+    width: 98%;
   }
 }/*# sourceMappingURL=PrudectCard.css.map */

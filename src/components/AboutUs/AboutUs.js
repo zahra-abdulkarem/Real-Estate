@@ -3,6 +3,7 @@ import './sass/AboutUs.css'
 import aboutImage1 from '../../images/About.jpg'
 import aboutImage2 from '../../images/About-2.jpg'
 import aboutImage3 from '../../images/About-3.jpg'
+import Button from '../button'
 function AboutUs() {
     return (
         <>
@@ -30,7 +31,7 @@ function AboutUs() {
                             <h2>Understanding Real Estate</h2>
                             <p>What Is Real Estate? Real estate is defined as the land and any permanent structures, like a home, or improvements attached to the land, whether natural or man-made.Real estate is a form of reaproperty. It differs from personal property, which is not permanently attached to the land, such as vehicles, boats, jewelry, furniture, and farm equipment.</p>
                             <p>Understanding Real Estate The terms land, real estate, and real property are often used interchangeably, but there are distinctions. Land refers to the earth's surface down to the center of the earth and upward to the airspace above, including the trees, minerals, and water. The physical characteristics of land include its immobility, indestructibility, and uniqueness, where each parcel of land differs geographically.</p>
-                            <button className="btn">read more <span>&#10230;</span></button>
+                            <Button>read more</Button>
                         </div>
                         
                         <div className='image'><img src={aboutImage2} alt='aboutPhotoTwo'/></div>

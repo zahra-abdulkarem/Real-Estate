@@ -1,24 +1,17 @@
 import React from 'react'
-import './sass/Apartments.css'
-import apartmentsData from '../../../Data/ApartmentsData'
+import {apartmentData} from '../../../Data/prudectsData'
 import {PrudectCard} from '../../exports'
 function Apartments() {
     return (
         <React.Fragment>
             <div className='Apartments'>
                 <h1 className='title'>Apartments</h1>
-                <div className='Apartments-container'>
-                    <div className='Apartments-cards'>
+                <div className='prudect-Cards-Container'>
                         {
-                            apartmentsData.map(exampleCard => {
-                                return <PrudectCard
-                                {...exampleCard}
-                                key={exampleCard.id} 
-                                />
-                                })
-                        }
+                        apartmentData.map(exampleCard => {
+                            return <PrudectCard {...exampleCard} key={exampleCard.id} /> 
+                        })}
                     </div>
-                </div>
             </div>
         </React.Fragment>
     )

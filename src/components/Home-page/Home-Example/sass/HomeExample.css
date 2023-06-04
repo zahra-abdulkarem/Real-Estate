@@ -5,7 +5,7 @@
   font-family: sans-serif;
   letter-spacing: 0.1rem;
   text-transform: capitalize;
-  transition: 1s;
+  transition: 0.4s;
 }
 
 body {
@@ -56,6 +56,13 @@ section {
   padding: 3rem 1rem;
 }
 
+.prudect-Cards-Container {
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  gap: 0.5rem;
+  row-gap: 1.2rem;
+}
+
 @media (max-width: 991px) {
   section {
     padding: 1.5rem 0.5rem;
@@ -79,6 +86,10 @@ section {
   .btn span {
     font-size: 0.9rem;
   }
+  .prudect-Cards-Container {
+    grid-template-columns: repeat(2, 50%);
+    row-gap: 1rem;
+  }
 }
 @media (max-width: 441px) {
   .title {
@@ -97,6 +108,9 @@ section {
   }
   .btn span {
     font-size: 0.7rem;
+  }
+  .prudect-Cards-Container {
+    grid-template-columns: 100%;
   }
 }
 .example-card {

@@ -14,12 +14,12 @@ function Blogs() {
 
                     <div className="blogs-nav-bar">
                                 <h1>Featured Articles For Everyone</h1>
-                                <a href="/">The Most Important And Newest Residential Neighborhoods In The United States</a>
+                                {/* <a href="/">The Most Important And Newest Residential Neighborhoods In The United States</a>
                                 <a href="/">The Best Global Tourist Sites</a>
                                 <a href="/">The Most Beautiful Apartments Around The World</a>
                                 <a href="/">Cheap But Nice Apartments</a>
                                 <a href="/">Religious Tourism In Mecca And The Best Hotels In Mecca</a>
-                                <a href="/">Radi For Construction And Investment</a>
+                                <a href="/">Radi For Construction And Investment</a> */}
 
                                 <a href='#blog-6'>Why Do Many People Prefer To Buy Lands Far From The City?</a>
                                 <a href='#blog-6'>The Best Global Tourist Sites</a>

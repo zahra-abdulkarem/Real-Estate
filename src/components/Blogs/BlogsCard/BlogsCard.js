@@ -1,5 +1,6 @@
 import React from 'react'
 import './sass/BlogsCard.css'
+import Button from '../../button'
 
 function BlogsCard(props) {
     return (
@@ -12,7 +13,7 @@ function BlogsCard(props) {
                 <p>{props.blogText3}</p>
                 <p>{props.blogText4}</p>
                 <p>{props.blogText5}</p> */}
-                <a href={"#"+props.alt} className='btn'>read now<span>&#10230;</span></a>
+                <Button>read now</Button>
                 <span>{props.views}</span>
             </div>
         </React.Fragment>

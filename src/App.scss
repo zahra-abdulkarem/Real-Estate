@@ -12,7 +12,7 @@ $second-color: #003cb3;
     font-family: sans-serif;
     letter-spacing: .1rem;
     text-transform: capitalize;
-    transition: 1s;
+    transition: .4s;
 }
 body{
     overflow-x: hidden;
@@ -64,6 +64,14 @@ section{
     padding: 3rem 1rem;
 }
 
+//prudect-Cards
+.prudect-Cards-Container{
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    gap: .5rem;
+    row-gap: 1.2rem;
+}
+
 
 @media (max-width: 991px){
     section{
@@ -72,6 +80,10 @@ section{
 }
 
 @media (max-width: 700px){
+    .title {
+        padding: 1rem;
+        font-size: 2rem;
+    }
     section{
         padding: 1rem .2rem;
     }
@@ -91,6 +103,10 @@ section{
         span{
             font-size: .9rem;
         }
+    }
+    .prudect-Cards-Container{
+        grid-template-columns: repeat(2, 50%);
+        row-gap: .7rem;
     }
 }
 
@@ -115,4 +131,10 @@ section{
             font-size: .7rem;
         }
     }
+    .prudect-Cards-Container{
+        grid-template-columns: 100%;
+    }
 }
+
+
+

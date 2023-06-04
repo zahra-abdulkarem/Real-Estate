@@ -6,10 +6,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(
-        #0000807d,
-        #003cb331
-    ), url('../../../images/home.webp');
+    background-image: url('../../../images/home.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -50,7 +47,7 @@
 
 @media (max-width: 441px){
     .HomeContent{
-        height: 65vh;
+        height: 70vh;
     }
     .house-examples{
         grid-template-columns: 100%;

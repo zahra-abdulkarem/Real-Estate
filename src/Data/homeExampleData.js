@@ -1,6 +1,6 @@
-import img1 from '../images/buy/villa-1.jpg'
+import img1 from '../images/buy/big-house.jpg'
 import img2 from '../images/rent/apartment-6.jpg'
-import img3 from '../images/buy/villa-5.jpg'
+import img3 from '../images/new.jpg'
 import img4 from '../images/rent/villa-4.jpg'
 import img5 from '../images/buy/apartment-2.jpg'
 import img6 from '../images/rent/villa-2.jpg'
@@ -10,8 +10,8 @@ const homeData = [
         id: 1,
         image: img1,
         alt: 'img1',
-        h1: "nice apartment",
-        h3: "8900000",
+        h1: "big house",
+        h3: "8500000",
         p: "New York City, 24583 Street"
     },
     {
@@ -26,8 +26,8 @@ const homeData = [
         id: 3,
         image: img3,
         alt: 'img3',
-        h1: "Newly Constructed Luxury apartment",
-        h3: "3500000",
+        h1: "New villa project under construction",
+        h3: "1500000",
         p: "New jurcy City, 24583 Street"
     },
     {

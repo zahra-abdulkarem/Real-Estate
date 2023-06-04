@@ -1,125 +1,123 @@
 @import '../../../App.scss';
-.contact{
-    background: $light-color;
-    .container{
-        display: flex;
-        align-items: start;
-        justify-content: space-between;
-        .menu-bars{
-            background: $second-color;
-            color: $light-color;
-            font-size: 1.4rem;
-            padding: .5rem;
+.Contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+    .contact-top{
+        position: absolute;
+        top: 5rem;
+        left: 1rem;
+        .fa-info{
+            background: $main-color;
+            padding: .5rem .8rem;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 1.2rem;
             margin: .5rem;
-            border-radius: .3rem;
-        }
-        .contact-content{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            h4{
-                font-size: 1rem;
-                font-weight: lighter;
-                color: $dark;
-                text-align: center;
-                margin: 1rem .5rem;
-                padding: 0 2rem;
-            }
-            form{
-                width: 99%;
-                margin: 1rem .5rem;
-                background: #fff;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                padding: .5rem;
-                border: .1rem solid #ddd;
-                input,
-                textarea{
-                    width: 99%;
-                    max-width: 99%;
-                    height: 2rem;
-                    outline: none;
-                    border: none;
-                    background: transparent;
-                    padding: 1.2rem;
-                    margin: .7rem 0;
-                    border-bottom: .1rem solid #ddd;
-    
-                }
-                textarea{
-                    min-width: 99%;
-                    height: 5rem;
-                    max-height: 7rem;
-                }
+            &:hover{
+                background: $second-color;
             }
         }
         .info{
-            text-align: center;
-            color: #fff;
-            font-size: 1.4rem;
-            background: $second-color;
-            padding: 2rem;
-            border-radius: .3rem;
-            h4{
-                font-size: 2rem;
-                color: $main-color;
-            }
-            .info-options{
-                display: flex;
-                flex-direction: column;
-                align-items: start;
-                i{
-                    margin: 1rem 0;
-                    font-size: 1.2rem;
-                    cursor: pointer;
-                    span{
-                        font-weight: lighter;
-                        margin-left: 1rem;
-                        font-size: 1rem;
+            background: $main-color;
+            padding: 1rem;
+            line-height: 3rem;
+            border-radius: .5rem;
+            display: none;
+            cursor: pointer;
+            li{
+                list-style: none;
+                font-size: .8rem;
+                word-spacing: .4rem;
+                color: #fff;
+                &:hover{
+                    color: $second-color;
+                    i{
+                        transform: rotate(360deg);
                     }
-                    &:hover{
-                        color: $main-color;
+                    span{
+                        letter-spacing: .2rem;
                     }
                 }
+                span{
+                    font-weight: lighter;
+                }
             }
-            display: none;
+            &.show-info{
+                display: block;
+            }
         }
-        .show-info{
-            display: block;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        input,
+        textarea{
+            min-width: 35rem;
+            min-height: 3rem;
+            padding: .5rem 1rem;
+            outline: none;
+            margin: .5rem 0;
+            background: #eee;
+            border: .1rem solid #fff;
+            border-radius: 2rem;
+            font-size: 1.1rem;
+            color: $main-color;
+        }
+        textarea{
+            max-height: 10rem;
+            max-width: 40rem;
+            height: 7rem;
         }
     }
 }
 
 
 @media(max-width: 771px){
-    .contact{
-        .container{
-            .menu-bars{
-                position: absolute;
-                top: 5rem;
-                left: 1rem;
+    .Contact{
+        form{
+            padding: .5rem;
+            input,
+            textarea{
+                min-width: 30rem;
+                min-height: 2.4rem;
             }
+            textarea{
+                max-height: 8rem;
+                max-width: 30rem;
+                height: 5rem;
+            }
+        }
+    }
+}
+
+@media(max-width: 499px){
+    .Contact{
+        .contact-top{
+            left: .4rem;
             .info{
-                font-size: .8rem;
-                padding: .5rem;
-                position: absolute;
-                top: 9rem;
-                left: 1rem;
-                h4{
-                    font-size: 1.3rem;
+                padding: .4rem;
+                line-height: 2rem;
+                li{
+                    word-spacing: .1rem;
                 }
-                .info-options{
-                    i{
-                        margin: .6rem 0;
-                        font-size: 1rem;
-                        span{
-                            margin-left: .5rem;
-                        }
-                    }
-                }
+            }
+        }
+        form{
+            padding: .5rem;
+            input,
+            textarea{
+                min-width: 17rem;
+                min-height: 2.4rem;
+            }
+            textarea{
+                max-height: 8rem;
+                max-width: 20rem;
+                height: 5rem;
             }
         }
     }

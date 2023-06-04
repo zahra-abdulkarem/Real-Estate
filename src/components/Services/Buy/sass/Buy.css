@@ -5,7 +5,7 @@
   font-family: sans-serif;
   letter-spacing: 0.1rem;
   text-transform: capitalize;
-  transition: 1s;
+  transition: 0.4s;
 }
 
 body {
@@ -56,12 +56,23 @@ section {
   padding: 3rem 1rem;
 }
 
+.prudect-Cards-Container {
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  gap: 0.5rem;
+  row-gap: 1.2rem;
+}
+
 @media (max-width: 991px) {
   section {
     padding: 1.5rem 0.5rem;
   }
 }
 @media (max-width: 700px) {
+  .title {
+    padding: 1rem;
+    font-size: 2rem;
+  }
   section {
     padding: 1rem 0.2rem;
   }
@@ -78,6 +89,10 @@ section {
   }
   .btn span {
     font-size: 0.9rem;
+  }
+  .prudect-Cards-Container {
+    grid-template-columns: repeat(2, 50%);
+    row-gap: 0.7rem;
   }
 }
 @media (max-width: 441px) {
@@ -98,6 +113,9 @@ section {
   .btn span {
     font-size: 0.7rem;
   }
+  .prudect-Cards-Container {
+    grid-template-columns: 100%;
+  }
 }
 .Buy {
   background: #eee;
@@ -111,15 +129,15 @@ section {
 .Buy .buy-container .input-form input {
   width: 50%;
   height: 3rem;
-  border: 0.1rem solid #999;
+  border: none;
   border-radius: 5rem;
   outline: none;
   color: #000080;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 0.5rem 1rem;
   margin: 2rem 0.5rem;
 }
-.Buy .buy-container .input-form .fa-magnifying-glass {
+.Buy .buy-container .input-form .search-btn {
   width: 3rem;
   height: 3rem;
   color: #fff;
@@ -135,30 +153,18 @@ section {
   padding: 0.5rem;
   cursor: pointer;
 }
-.Buy .buy-container .input-form .fa-magnifying-glass:hover {
+.Buy .buy-container .input-form .search-btn:hover {
   width: 10rem;
   background: #0248d3;
 }
-.Buy .buy-container .input-form .fa-magnifying-glass:hover span {
+.Buy .buy-container .input-form .search-btn:hover span {
   width: 5.5rem;
   margin-left: 1rem;
 }
-.Buy .buy-container .input-form .fa-magnifying-glass span {
+.Buy .buy-container .input-form .search-btn span {
   width: 0;
   overflow: hidden;
   transition: 0.8s;
-}
-.Buy .buy-container .button-place {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem;
-}
-.Buy .buy-container .buy-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 32%);
-  gap: 0.5rem;
-  row-gap: 1.2rem;
 }
 
 @media (max-width: 991px) {
@@ -171,13 +177,9 @@ section {
     width: 80%;
     height: 2.5rem;
   }
-  .Buy .buy-container .input-form .fa-magnifying-glass {
+  .Buy .buy-container .input-form .search-btn {
     width: 2rem;
     height: 2rem;
-  }
-  .Buy .buy-container .buy-cards {
-    grid-template-columns: repeat(3, 31%);
-    row-gap: 1rem;
   }
 }
 @media (max-width: 771px) {
@@ -190,21 +192,13 @@ section {
     width: 80%;
     height: 2.5rem;
   }
-  .Buy .buy-container .input-form .fa-magnifying-glass {
+  .Buy .buy-container .input-form .search-btn {
     width: 2rem;
     height: 2rem;
-  }
-  .Buy .buy-container .buy-cards {
-    grid-template-columns: repeat(2, 50%);
-    row-gap: 1rem;
   }
 }
 @media (max-width: 441px) {
   .Buy .buy-container .input-form input {
-    width: 80%;
     height: 2rem;
-  }
-  .Buy .buy-container .buy-cards {
-    grid-template-columns: 100%;
   }
 }/*# sourceMappingURL=Buy.css.map */

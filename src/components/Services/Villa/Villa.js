@@ -1,10 +1,9 @@
 import React from 'react'
 import {PrudectCard} from '../../exports'
-import villaCard from '../../../Data/VillaData'
-import './sass/Villa.css'
+import {villaData} from '../../../Data/prudectsData'
 
 const Villa = () => {
-    const example = villaCard.map(exampleCard => {
+    const example = villaData.map(exampleCard => {
     return <PrudectCard
     key={exampleCard.id} 
     image={exampleCard.image} 
@@ -14,13 +13,11 @@ const Villa = () => {
     })
     return (
         <React.Fragment>
-            <div className='Villa'>
+            <div className='villa'>
                 <h1 className='title'>villa</h1>
-                <div className='Villa-container'>
-                    <div className='Villa-cards'>
+                <div className='prudect-Cards-Container'>
                         {example}
                     </div>
-                </div>
             </div>
         </React.Fragment>
     )

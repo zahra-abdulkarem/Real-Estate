@@ -5,7 +5,7 @@
   font-family: sans-serif;
   letter-spacing: 0.1rem;
   text-transform: capitalize;
-  transition: 1s;
+  transition: 0.4s;
 }
 
 body {
@@ -56,6 +56,13 @@ section {
   padding: 3rem 1rem;
 }
 
+.prudect-Cards-Container {
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  gap: 0.5rem;
+  row-gap: 1.2rem;
+}
+
 @media (max-width: 991px) {
   section {
     padding: 1.5rem 0.5rem;
@@ -79,6 +86,10 @@ section {
   .btn span {
     font-size: 0.9rem;
   }
+  .prudect-Cards-Container {
+    grid-template-columns: repeat(2, 50%);
+    row-gap: 1rem;
+  }
 }
 @media (max-width: 441px) {
   .title {
@@ -98,11 +109,16 @@ section {
   .btn span {
     font-size: 0.7rem;
   }
+  .prudect-Cards-Container {
+    grid-template-columns: 100%;
+  }
 }
 .blog-card {
   background: #fff;
-  border: 0.1rem solid #999;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .blog-card .blog-title {
   color: #000080;
@@ -112,17 +128,16 @@ section {
 }
 .blog-card img {
   width: 100%;
-  height: 17rem;
+  height: 18rem;
 }
 .blog-card p {
   font-size: 1rem;
-  line-height: 1.8rem;
+  line-height: 2rem;
   word-spacing: 0.4rem;
   color: #555;
-  margin: 1.5rem 0;
+  margin: 1rem 0;
   text-align: left;
   padding: 0.5rem;
-  opacity: 1;
 }
 .blog-card span {
   color: #999;

@@ -1,6 +1,6 @@
 import React from 'react'
 import {PrudectCard} from '../../exports'
-import rentData from '../../../Data/RentCardData'
+import {rentData} from '../../../Data/prudectsData'
 import { useState } from 'react'
 import './sass/Rent.css'
 
@@ -30,7 +30,7 @@ const Rent = () => {
                 <button value="low" onClick={handleFilter}  className='services-btn'>the lowest price</button>
                 <button value="all" onClick={handleFilter} className='services-btn'>show all</button>
                 </div>
-                <div className='rent-cards'>
+                <div className='prudect-Cards-Container'>
                     {
                         data.map(exampleCard => {
                             return <PrudectCard {...exampleCard} key={exampleCard.id}/>
