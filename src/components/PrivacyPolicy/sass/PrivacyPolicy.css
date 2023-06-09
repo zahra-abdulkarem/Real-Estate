@@ -69,6 +69,10 @@ section {
   }
 }
 @media (max-width: 700px) {
+  .title {
+    padding: 1rem;
+    font-size: 2rem;
+  }
   section {
     padding: 1rem 0.2rem;
   }
@@ -88,7 +92,7 @@ section {
   }
   .prudect-Cards-Container {
     grid-template-columns: repeat(2, 50%);
-    row-gap: 1rem;
+    row-gap: 0.7rem;
   }
 }
 @media (max-width: 441px) {
