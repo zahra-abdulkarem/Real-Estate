@@ -1,7 +1,7 @@
 import img1 from '../images/buy/big-house.jpg'
-import img2 from '../images/rent/apartment-6.jpg'
+import img2 from '../images/rent/house-2.jpg'
 import img3 from '../images/new.jpg'
-import img4 from '../images/rent/villa-4.jpg'
+import img4 from '../images/rent/house.jpg'
 import img5 from '../images/buy/apartment-2.jpg'
 import img6 from '../images/rent/villa-2.jpg'
 
@@ -18,7 +18,7 @@ const homeData = [
         id: 2,
         image: img2,
         alt: 'img2',
-        h1: "Newly Constructed Luxury apartment",
+        h1: "Newly Constructed Luxury house",
         h3: "6580800",
         p: " Arizona City, 24583 Street"
     },
@@ -34,7 +34,7 @@ const homeData = [
         id: 4,
         image: img4,
         alt: 'img4',
-        h1: "beautiful apartment",
+        h1: "beautiful house",
         h3: "3500000",
         p: " Arkansas City, 78783 Street"
     },

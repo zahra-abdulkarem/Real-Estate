@@ -124,7 +124,7 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("../../../images/home.jpg");
+  background-image: url("../../../images/hero.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -139,6 +139,41 @@ section {
 .HomeContent p {
   margin: 2rem 0;
   font-size: 1.4rem;
+}
+.HomeContent .btn {
+  animation: behappy 0.3s;
+}
+@keyframes behappy {
+  10% {
+    transform: scale(1.6);
+  }
+  20% {
+    transform: scale(1.4);
+  }
+  30% {
+    transform: scale(1.3);
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  90% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1.4);
+  }
 }
 
 .house-examples {
