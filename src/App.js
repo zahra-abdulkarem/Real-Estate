@@ -5,7 +5,7 @@ import {Container, Header, HomeContent, AboutUs, Services, Buy, Rent, NewProject
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename='/Real-Estate'>
         <Header/>
           <Container>
             <Routes>

@@ -1,19 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './sass/MoreDetails.css'
 import formatCurrency from '../formatCurrency'
-import { Link} from 'react-router-dom'
-import img from '../../images/About.jpg'
+import { Link, useParams} from 'react-router-dom'
+import Data from '../../Data/prudectsData'
 const MoreDetails = () => {
+    const {id} = useParams();
+    const [item, setItem] = useState(null);
+    useEffect(() => {
+        let item = Data.find(item => item.id === parseInt(id));
+        if(item){
+            setItem(item);
+        }
+    }, []);
     return (
-        <div className='container show'>
+        <>
+        {
+        item ?    <div className='container show'>
         <div className='MoreDetails' >
         <Link to = '/Services'><i className='close-icon fa fa-xmark'></i></Link>
         <div className='details-container'>
-                <img className='image' src={img} alt='img'/>
+                <img className='image' src={item.image} alt='img'/>
             <div className='details-text'>
-                <h1>title</h1>
+                <h1>{item.h1}</h1>
                 <p>With An Enviable Location At The Front Of The Clock Towers Complex And Overlooking Al Masjid Al Haram And The Holy Kaaba, The 5-Star Al Marwa Rayhaan By Rotana Offers Guests Both Comfort And Convenience During Their Stay And Is An Ideal Base For Visiting Pilgrims. Our Brand Name, Rayhaan, Refers To An Aromatic Plant Mentioned  Makkah.</p>
-                <h3 className='price'>{formatCurrency(5000)}</h3>
+                <h3 className='price'>{formatCurrency(item.h3)}</h3>
                 <div className='more-info'>7 <i className="fa-solid fa-bed"></i> | 3 <i className="fa-solid fa-toilet"></i></div>
                 <div className='stars'>
                     <i className='fa fa-star'></i>
@@ -35,7 +45,9 @@ const MoreDetails = () => {
             </ul>
         </div>
     </div>
-    </div>
+        </div>: null
+        }
+        </>
     )
 }
 
